@@ -9,7 +9,6 @@ namespace microsoft.Controllers;
 [Route("[controller]")]
 public class CosmosDBServiceController : ControllerBase
 {
-    // public static string connectionString = "AccountEndpoint=https://recipehub.documents.azure.com:443/;AccountKey=dRoxR6G6Qx2fOI2LSLcMP5KuzLRHrGhfUmi6XvQqJXJhMTbW6JTqqgg1r3x2LAK2oWirZBiNc8WZACDbD7jWqw==";
     public static string databaseName = "ToDoList";
     public static string containerName = "Items";
     public static CosmosClient cosmosClient = new CosmosClient(connectionString);
