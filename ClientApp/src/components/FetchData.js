@@ -9,8 +9,9 @@ export class FetchData extends Component {
   }
 
   componentDidMount() {
-    this.populateWeatherData();
-  }
+      this.populateWeatherData();
+      this.populateWeatherData2();
+    }
 
   static renderForecastsTable(forecasts) {
     return (
@@ -53,7 +54,13 @@ export class FetchData extends Component {
 
   async populateWeatherData() {
     const response = await fetch('weatherforecast');
+    console.log(response);
     const data = await response.json();
     this.setState({ forecasts: data, loading: false });
-  }
+    }
+
+   async populateWeatherData2() {
+    const response = await fetch('cosmosdbservice');
+    console.log(response);
+   }
 }

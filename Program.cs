@@ -1,4 +1,8 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using microsoft.Controllers;
+using microsoft.Models;
+using Microsoft.Azure.Cosmos;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
@@ -11,6 +15,8 @@ if (!app.Environment.IsDevelopment())
 {
 }
 
+
+
 app.UseStaticFiles();
 app.UseRouting();
 
@@ -21,5 +27,10 @@ app.MapControllerRoute(
 
 app.MapFallbackToFile("index.html");
 
+
+
 app.Run();
+
+
+
 
